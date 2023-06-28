@@ -1,0 +1,286 @@
+using System;
+using System.Text;
+using System.Collections.Generic;
+using System.Threading.Channels;
+using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
+using System.Linq.Expressions;
+
+namespace Otus_Methods
+{
+    class SolvingTheQuadraticEquation
+    {
+        static string[] valueOfCoefficient = { "", "", "" };
+        
+        static int selectedValue = 0;
+
+        static string[] coefficients = { "a", "b", "c" };
+
+        static IDictionary<string, string> wrongTypeAnswers = new Dictionary<string, string>();
+
+        public enum Severity
+        {
+            Warning,
+            Error
+        }
+
+        class CalcDataException : Exception
+        {
+            public CalcDataException() : base() { }
+            public CalcDataException(string message) : base(message) { }
+            public CalcDataException(string message, Severity severity) { }
+        }
+        public static void Main()
+        {
+            try
+            {
+                StartMenu();
+            }
+            catch (CalcDataException cde)
+            {
+                FormatData("Вещественных значений не найдено.", Severity.Warning);
+            }
+            catch (Exception ex)
+            {
+                FormatData($"Неверный формат параметра(ов) {ex.Message}", Severity.Error);
+            }
+        }
+
+        public static void FormatData(string message, Severity severity) 
+        {
+            if (severity == Severity.Warning) 
+            {
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.BackgroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(string.Join("", Enumerable.Repeat("-", 50)));
+                Console.WriteLine(message);
+                Console.WriteLine(string.Join("", Enumerable.Repeat("-", 50)));
+                Console.ResetColor();
+                Console.WriteLine("Для выхода нажмите любую клавишу");
+                Console.ReadKey();
+            }
+            else if (severity == Severity.Error) 
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine(string.Join("", Enumerable.Repeat("-", 50)));
+                Console.WriteLine(message);
+                Console.WriteLine(string.Join("", Enumerable.Repeat("-", 50)));
+                Console.WriteLine(string.Join("", Enumerable.Repeat(" ", 50)));
+                foreach (KeyValuePair<string, string> kvp in wrongTypeAnswers) 
+                {
+                    Console.WriteLine($"{kvp.Key} = {kvp.Value}");
+                }
+                Console.ResetColor();
+                Console.WriteLine("Для повторного ввода нажмите любую клавишу");
+                Console.ReadKey();
+                valueOfCoefficient[0] = "";
+                valueOfCoefficient[1] = "";
+                valueOfCoefficient[2] = "";
+                Console.Clear();
+                StartMenu();
+            }
+        }
+        public static void PrintMenuCoefficient()
+        {
+            string printA = string.Format("1.a:{0,-10}", valueOfCoefficient[0]);
+            string printB = string.Format("2.b:{0,-10}", valueOfCoefficient[1]);
+            string printC = string.Format("3.c:{0,-10}", valueOfCoefficient[2]);
+            if (selectedValue == 1) 
+            {
+                Console.WriteLine(">" + printA + "          ");
+                Console.WriteLine(printB + "          ");
+                Console.WriteLine(printC + "          ");
+            }
+            else if (selectedValue == 2) 
+            {
+                Console.WriteLine(printA + "          ");
+                Console.WriteLine(">" + printB + "          ");
+                Console.WriteLine(printC + "          ");
+            }
+            else if (selectedValue == 3)
+            {
+                Console.WriteLine(printA + "          ");
+                Console.WriteLine(printB + "          ");
+                Console.WriteLine(">" + printC + "          ");
+            }
+            else 
+            {
+                Console.WriteLine(printA + "          ");
+                Console.WriteLine(printB + "          ");
+                Console.WriteLine(printC + "          ");
+            }
+        }
+
+        public static void PrintEquation()
+        {
+            string printA = string.IsNullOrEmpty(valueOfCoefficient[0]) ? "a" : valueOfCoefficient[0];
+            string printB = string.IsNullOrEmpty(valueOfCoefficient[1]) ? "b" : valueOfCoefficient[1];
+            string printC = string.IsNullOrEmpty(valueOfCoefficient[2]) ? "c" : valueOfCoefficient[2];
+
+            //string printEquation = string.Format("{0, -46}", equation);
+            Console.Write($"{printA} * x^2 + {printB} * x + {printC} = 0"); Console.WriteLine(", Enter - подтверждение ввода, Backspace - стереть всё.                              ");
+        }
+
+        //public static void PrintCursor(int pos)
+        //{
+        //    Console.SetCursorPosition(0, pos);
+        //    Console.WriteLine(">");
+        //    Console.SetCursorPosition(0, pos);
+        //}
+        public static void NoCursor(int pos)
+        {
+            Console.SetCursorPosition(0, pos);
+            Console.WriteLine(" ");
+            Console.SetCursorPosition(0, pos);
+        }
+
+        public static void SetDown()
+        {
+            if (selectedValue < coefficients.Length)
+            {
+                selectedValue++;
+            }
+            else
+            {
+                selectedValue = 1;
+            }
+        }
+
+        public static void SetUp()
+        {
+            if (selectedValue > 1)
+            {
+                selectedValue--;
+            }
+            else
+            {
+                selectedValue = 3;
+            }
+        }
+
+        public static void CalculateDiscriminant(string a_str, string b_str, string c_str)
+        {
+            string wrongAnswers = "";
+            
+            bool a_bool = Int32.TryParse(a_str, out int a);
+            bool b_bool = Int32.TryParse(b_str, out int b);
+            bool c_bool = Int32.TryParse(c_str, out int c);
+
+            double x;
+            double discriminant = b * b - 4 * a * c;
+
+            wrongTypeAnswers.Clear();
+            wrongTypeAnswers.Add("a", a_str);
+            wrongTypeAnswers.Add("b", b_str);
+            wrongTypeAnswers.Add("c", c_str);
+
+            if (!a_bool) wrongAnswers += "a, ";
+            if (!b_bool) wrongAnswers += "b, ";
+            if (!c_bool) wrongAnswers += "c ";
+
+            try
+            {
+                if (!a_bool || !b_bool || !c_bool)
+                {
+                    throw new Exception();
+                }
+            }
+            catch 
+            {
+                throw new Exception(wrongAnswers);
+            }
+            
+            
+            if (discriminant < 0) 
+            {
+                throw new CalcDataException();
+            }
+            else if (discriminant == 0) 
+            {
+                x = - (double)b / (2 * (double)a);
+                
+                Console.WriteLine($"x = {x}");
+                Console.WriteLine("Для выхода нажмите любую клавишу");
+                Console.ReadKey();
+            }
+            else 
+            {
+                x = Math.Round((- b + Math.Sqrt(discriminant)) / (2 * a), 4);
+                
+                Console.Write($"x1 = {x}");
+                Console.Write(", ");
+                
+                x = Math.Round((- b - Math.Sqrt(discriminant)) / (2 * a), 4);
+                
+                Console.Write($"x2 = {x}"); Console.WriteLine();
+                Console.WriteLine("Для выхода нажмите любую клавишу");
+                Console.ReadKey();
+            }
+
+        }
+        public static void AddValueToVariable(char valueToAdd)
+        {
+            if ((selectedValue == 1 && char.IsAsciiLetterOrDigit(valueToAdd)) || (selectedValue == 1 && valueToAdd == '-'))
+            {
+                valueOfCoefficient[0] += Convert.ToString(valueToAdd);
+            }
+            else if ((selectedValue == 2 && char.IsAsciiLetterOrDigit(valueToAdd)) || (selectedValue == 2 && valueToAdd == '-'))
+            {
+                valueOfCoefficient[1] += Convert.ToString(valueToAdd);
+            }
+            else if ((selectedValue == 3 && char.IsAsciiLetterOrDigit(valueToAdd)) || (selectedValue == 3 && valueToAdd == '-'))
+            {
+                valueOfCoefficient[2] += Convert.ToString(valueToAdd);
+            }
+        }
+
+        public static void StartMenu()
+        {
+            ConsoleKeyInfo ki;
+            
+            selectedValue = 1;
+            
+            PrintEquation();
+            PrintMenuCoefficient();
+            //PrintCursor(selectedValue);
+            do
+            {
+                Console.SetCursorPosition(0, 0);
+                PrintEquation();
+                Console.SetCursorPosition(0, selectedValue);
+                ki = Console.ReadKey();
+                AddValueToVariable(ki.KeyChar);
+                NoCursor(selectedValue);
+                switch (ki.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        SetUp();
+                        break;
+                    case ConsoleKey.DownArrow:
+                        SetDown();
+                        break;
+                    case ConsoleKey.Backspace:
+                        valueOfCoefficient[0] = "";
+                        valueOfCoefficient[1] = "";
+                        valueOfCoefficient[2] = "";
+                        break;
+                }
+                if (ki.Key == ConsoleKey.Enter) 
+                {
+                    selectedValue = 4;
+                    Console.SetCursorPosition(0, 1);
+                    PrintMenuCoefficient();
+                    Console.SetCursorPosition(0, 5);
+                    CalculateDiscriminant(valueOfCoefficient[0], valueOfCoefficient[1], valueOfCoefficient[2]);
+                    break;
+                }
+                Console.SetCursorPosition(0, 0);
+                PrintEquation();
+                Console.SetCursorPosition(0, 1);
+                PrintMenuCoefficient();
+                //PrintCursor(selectedValue);
+            } while (ki.Key != ConsoleKey.Escape);
+        }
+    }
+}
