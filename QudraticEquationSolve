@@ -122,12 +122,6 @@ namespace Otus_Methods
             Console.Write($"{printA} * x^2 + {printB} * x + {printC} = 0"); Console.WriteLine(", Enter - подтверждение ввода, Backspace - стереть всё.                              ");
         }
 
-        //public static void PrintCursor(int pos)
-        //{
-        //    Console.SetCursorPosition(0, pos);
-        //    Console.WriteLine(">");
-        //    Console.SetCursorPosition(0, pos);
-        //}
         public static void NoCursor(int pos)
         {
             Console.SetCursorPosition(0, pos);
@@ -181,12 +175,31 @@ namespace Otus_Methods
 
             try
             {
+                Int32.Parse(a_str);
+                Int32.Parse(b_str);
+                Int32.Parse(c_str);
                 if (!a_bool || !b_bool || !c_bool)
                 {
                     throw new Exception();
                 }
             }
-            catch 
+            catch (OverflowException)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.WriteLine(string.Join("", Enumerable.Repeat("-", 60)));
+                Console.WriteLine("Задайте число в диапазоне от -2 147 483 648 до 2 147 483 647");
+                Console.WriteLine(string.Join("", Enumerable.Repeat("-", 60)));
+                Console.ResetColor();
+                Console.WriteLine("Для повторного ввода нажмите любую клавишу");
+                Console.ReadKey();
+                valueOfCoefficient[0] = "";
+                valueOfCoefficient[1] = "";
+                valueOfCoefficient[2] = "";
+                Console.Clear();
+                StartMenu();
+            }
+            catch
             {
                 throw new Exception(wrongAnswers);
             }
