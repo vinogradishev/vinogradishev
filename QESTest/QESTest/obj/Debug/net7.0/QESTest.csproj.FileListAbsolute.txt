@@ -1,0 +1,15 @@
+C:\Users\Евген\source\repos\QESTest\QESTest\bin\Debug\net7.0\QESTest.exe
+C:\Users\Евген\source\repos\QESTest\QESTest\bin\Debug\net7.0\QESTest.deps.json
+C:\Users\Евген\source\repos\QESTest\QESTest\bin\Debug\net7.0\QESTest.runtimeconfig.json
+C:\Users\Евген\source\repos\QESTest\QESTest\bin\Debug\net7.0\QESTest.dll
+C:\Users\Евген\source\repos\QESTest\QESTest\bin\Debug\net7.0\QESTest.pdb
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\QESTest.csproj.AssemblyReference.cache
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\QESTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\QESTest.AssemblyInfoInputs.cache
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\QESTest.AssemblyInfo.cs
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\QESTest.csproj.CoreCompileInputs.cache
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\QESTest.dll
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\refint\QESTest.dll
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\QESTest.pdb
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\QESTest.genruntimeconfig.cache
+C:\Users\Евген\source\repos\QESTest\QESTest\obj\Debug\net7.0\ref\QESTest.dll
