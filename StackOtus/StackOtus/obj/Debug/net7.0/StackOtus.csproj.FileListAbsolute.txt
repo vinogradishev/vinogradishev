@@ -1,0 +1,15 @@
+C:\Users\Евген\source\repos\StackOtus\StackOtus\bin\Debug\net7.0\StackOtus.exe
+C:\Users\Евген\source\repos\StackOtus\StackOtus\bin\Debug\net7.0\StackOtus.deps.json
+C:\Users\Евген\source\repos\StackOtus\StackOtus\bin\Debug\net7.0\StackOtus.runtimeconfig.json
+C:\Users\Евген\source\repos\StackOtus\StackOtus\bin\Debug\net7.0\StackOtus.dll
+C:\Users\Евген\source\repos\StackOtus\StackOtus\bin\Debug\net7.0\StackOtus.pdb
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\StackOtus.csproj.AssemblyReference.cache
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\StackOtus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\StackOtus.AssemblyInfoInputs.cache
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\StackOtus.AssemblyInfo.cs
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\StackOtus.csproj.CoreCompileInputs.cache
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\StackOtus.dll
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\refint\StackOtus.dll
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\StackOtus.pdb
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\StackOtus.genruntimeconfig.cache
+C:\Users\Евген\source\repos\StackOtus\StackOtus\obj\Debug\net7.0\ref\StackOtus.dll
