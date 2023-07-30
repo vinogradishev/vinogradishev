@@ -1,0 +1,15 @@
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\For_tests.csproj.AssemblyReference.cache
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\For_tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\For_tests.AssemblyInfoInputs.cache
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\For_tests.AssemblyInfo.cs
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\For_tests.csproj.CoreCompileInputs.cache
+C:\Users\Евген\source\repos\For_tests\For_tests\bin\Debug\net6.0\For_tests.exe
+C:\Users\Евген\source\repos\For_tests\For_tests\bin\Debug\net6.0\For_tests.deps.json
+C:\Users\Евген\source\repos\For_tests\For_tests\bin\Debug\net6.0\For_tests.runtimeconfig.json
+C:\Users\Евген\source\repos\For_tests\For_tests\bin\Debug\net6.0\For_tests.dll
+C:\Users\Евген\source\repos\For_tests\For_tests\bin\Debug\net6.0\For_tests.pdb
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\For_tests.dll
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\refint\For_tests.dll
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\For_tests.pdb
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\For_tests.genruntimeconfig.cache
+C:\Users\Евген\source\repos\For_tests\For_tests\obj\Debug\net6.0\ref\For_tests.dll
