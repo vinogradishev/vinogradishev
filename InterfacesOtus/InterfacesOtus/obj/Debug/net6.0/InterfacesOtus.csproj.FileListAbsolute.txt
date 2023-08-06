@@ -1,0 +1,15 @@
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\bin\Debug\net6.0\InterfacesOtus.exe
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\bin\Debug\net6.0\InterfacesOtus.deps.json
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\bin\Debug\net6.0\InterfacesOtus.runtimeconfig.json
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\bin\Debug\net6.0\InterfacesOtus.dll
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\bin\Debug\net6.0\InterfacesOtus.pdb
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\InterfacesOtus.csproj.AssemblyReference.cache
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\InterfacesOtus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\InterfacesOtus.AssemblyInfoInputs.cache
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\InterfacesOtus.AssemblyInfo.cs
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\InterfacesOtus.csproj.CoreCompileInputs.cache
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\InterfacesOtus.dll
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\refint\InterfacesOtus.dll
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\InterfacesOtus.pdb
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\InterfacesOtus.genruntimeconfig.cache
+C:\Users\Евген\source\repos\InterfacesOtus\InterfacesOtus\obj\Debug\net6.0\ref\InterfacesOtus.dll
