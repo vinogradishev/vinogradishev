@@ -1,0 +1,15 @@
+C:\Users\Евген\source\repos\DZ#1\DZ#1\bin\Debug\net6.0\DZ#1.exe
+C:\Users\Евген\source\repos\DZ#1\DZ#1\bin\Debug\net6.0\DZ#1.deps.json
+C:\Users\Евген\source\repos\DZ#1\DZ#1\bin\Debug\net6.0\DZ#1.runtimeconfig.json
+C:\Users\Евген\source\repos\DZ#1\DZ#1\bin\Debug\net6.0\DZ#1.dll
+C:\Users\Евген\source\repos\DZ#1\DZ#1\bin\Debug\net6.0\DZ#1.pdb
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\DZ#1.csproj.AssemblyReference.cache
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\DZ#1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\DZ#1.AssemblyInfoInputs.cache
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\DZ#1.AssemblyInfo.cs
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\DZ#1.csproj.CoreCompileInputs.cache
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\DZ#1.dll
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\refint\DZ#1.dll
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\DZ#1.pdb
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\DZ#1.genruntimeconfig.cache
+C:\Users\Евген\source\repos\DZ#1\DZ#1\obj\Debug\net6.0\ref\DZ#1.dll
